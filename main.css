@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.text{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+}
+
+.text div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.header{
+    background:#071330;
+    grid-area:header;
+}
+
+.menu{
+    background:#ff3b57;
+    grid-area:menu;
+}
+
+.hero{
+    background:#4f86c6;
+    grid-area:hero;
+}
+
+.main{
+    background:#203452;
+    grid-area:main;
+}
+
+.banner{
+    background:#f4cf65;
+    color:black;
+    grid-area:banner;
+}
+
+.extra{
+    background:#4dc9a6;
+    color:black;
+    grid-area:extra;
+}
+
+.image{
+    background:#d8eef0;
+    color:black;
+    grid-area:image;
+}
+
+.text{
+    grid-template-columns:1fr;
+    grid-template-rows:
+        10vh
+        8vh
+        25vh
+        20vh
+        12vh
+        12vh
+        13vh;
+
+    grid-template-areas:
+    "header"
+    "menu"
+    "hero"
+    "main"
+    "banner"
+    "extra"
+    "image";
+}
+
+@media (min-width:768px){
+
+.text{
+    grid-template-columns:1fr 2fr 1fr;
+    grid-template-rows:
+        10vh
+        30vh
+        25vh
+        15vh
+        20vh;
+
+    grid-template-areas:
+    "header header header"
+    "hero hero hero"
+    "menu main main"
+    "menu banner banner"
+    "menu extra image";
+}
+}
+@media (min-width:1024px){
+
+.text{
+    grid-template-columns:1fr 2fr 1fr 1fr;
+    grid-template-rows:
+        10vh
+        45vh
+        20vh
+        10vh
+        15vh;
+
+    grid-template-areas:
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main . image"
+    "main main . extra"
+    "banner banner banner banner";
+}
+}
